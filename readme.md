@@ -1,4 +1,4 @@
-## This is a laravel 6 applaction using php7.4 & mysql for Job portal
+## This is a laravel 6 application using php7.4 & mysql for Job portal
 This is a Laravel 6 application using php7.4 & MySQL for the Job portal to find a job easily. I made this project for the final year (2020) of my graduation life from North Western University (NWU), Khulna.
 <br>
 
