@@ -16,6 +16,10 @@ cd nwujobs-nwu-final-year-project
 ```
 Step 4: Update environment variable on Docker file
 ```
+nanp Dockerfile
+```
+Update docker file value. Like mail user name use mailtrap.io credentials
+```
 ENV APP_DB=nwujobs
 ENV APP_DB_USER=biswajit
 ENV APP_DB_PASS=abc@1234
