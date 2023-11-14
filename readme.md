@@ -1,40 +1,43 @@
-## This is a laravel 6 applaction using php7.4 & mysql for Job portal
-This is a Laravel 6 application using php7.4 & MySQL for the Job portal to find a job easily. I made this project for the final year (2020) of my graduation life from North Western University (NWU), Khulna.
-<br>
+# Docker file
 
-<p>In this scenario, there are three types of users they are <b>job seeker</b>, <b>employer</b and <b>admin</b>. All the users should be able to login to the system with separate logins. New users can be registered only under job seeker and employer. A database is there to store the user details. This information can be retrieved by the users as per their privilege. Anyone can search the jobs are updated by the website immediately using the system.</p>
+## Open your terminal
 
-<b>This application are as follows :</b>
-- The applaction is for automation of Job Management System
-- It provides following facilities to
-  
-<b>1) Employer :</b>
-- Can add new job post for job seeker and update as required.
-- Can update their jobs details and delete jobs data.
-  
-<b>2) Job Seeker :</b>
-- Can apply for jobs login this website.
-- Can check the updated jobs news.
-- Save their favorite job
-  
-<b>3) Admin :</b>
-- Admin is the super user who can control the application from all possible aspects.
+Step 1: Install Docker
 
+Flow Link - https://docs.docker.com/engine/install/ubuntu/
 
-### Udemy project Tutorial (I was making project flow through this tutorial)
-https://www.udemy.com/course/make-a-job-portal-with-laravel-58-and-vue-js/
-<br>
-### Docker file & configuration
-https://github.com/bjnandi/nwujobs-nwu-final-year-project/tree/devops
-<br>
-### Docker image
-https://hub.docker.com/r/bjnandi/nwujobs-nwu-final-year-project
-<br>
-### Demo
+Step 2: Clone git
+```
+git clone -b devops https://github.com/bjnandi/nwujobs-nwu-final-year-project.git
+```
+Step 3: Change directory
+```
+cd nwujobs-nwu-final-year-project
+```
+Step 4: Update environment variable on Docker file
+```
+ENV APP_DB=nwujobs
+ENV APP_DB_USER=biswajit
+ENV APP_DB_PASS=abc@1234
+ENV DB_FILE=nwujobs.sql
+
+ENV APP_MAIL_USERNAME=use_mail_user_name
+ENV APP_MAIL_PASSWORD=use_mail_password
+
+ENV WEB_SERVER=127.0.0.1
+
+ENV GIT_REPO=https://github.com/bjnandi/nwujobs-nwu-final-year-project.git
+ENV GIT_BRANCH=main
+ENV GIT_APP_FOLDER=.
+```
+Step 5: Build docker 
+```
+sudo docker build -t myapp:latest .
+```
+Step 6: Run docker
+```
+sudo docker run -p 80:80 -d myapp:latest
+```
+Step 7: Browser your localhost, IP address or domain to check website (http://nwujobs.bjtechlife.com/)
 
 ![Screenshot](nwujobs.bjtechlife.com.jpg)
-<br><br>
-<b>If you face any quarry for this project feel free to contact me. I will try my best. Thank you</b>
-```
-https://www.linkedin.com/in/bjnandi/
-```
